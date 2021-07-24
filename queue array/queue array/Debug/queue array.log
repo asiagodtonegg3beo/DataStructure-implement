@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Fuckyoubitch\source\repos\queue array\queue array\Source.cpp(33): warning C4715: 'add': 不是所有控制路徑都傳回值
+C:\Users\Fuckyoubitch\source\repos\queue array\queue array\Source.cpp(46): warning C4715: 'del': 不是所有控制路徑都傳回值
+  queue array.vcxproj -> C:\Users\Fuckyoubitch\source\repos\queue array\Debug\queue array.exe
