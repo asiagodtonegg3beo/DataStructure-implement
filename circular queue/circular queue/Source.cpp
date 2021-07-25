@@ -1,5 +1,10 @@
 #include<stdio.h>
 #define max 3 //可存2格，環狀柱列只能使用n-1格
+/*
+1.n格只能用n-1格
+2.改善linear queue add問題，add、delete =>O(1) 
+3.empty、full 判別相同
+*/
 int front=0, rear=0; 
 int queue[max] = { 0 };
 void add(int n);
