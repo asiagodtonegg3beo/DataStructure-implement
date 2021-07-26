@@ -30,6 +30,7 @@ int add(int n) { //判斷是否滿，如果沒滿可添加
 		printf("成功增加%d在queue\n", n);
 		return n;
 	}
+	
 }
 
 int del() { //判斷是否空，如果沒空可刪除
@@ -42,7 +43,13 @@ int del() { //判斷是否空，如果沒空可刪除
 		printf("成功刪除%d在queue\n",queue[front]);
 		return queue[front];
 	}
-
+	if (front != -1) {//			n-1  O(n)
+		for (int i = front + 1; i <= rear; i++) { //一個一個往前挪
+			queue[i - (front + 1)] = i;
+		}
+		rear = rear - (front + 1); //front，rear調整
+		front = -1;
+	}
 }
 
 int isfull() { //rear+1表示數量 >=max判斷滿
