@@ -1,0 +1,8 @@
+﻿  Source.cpp
+Source.obj : error LNK2005: "bool __cdecl isempty(void)" (?isempty@@YA_NXZ) 已在 a.obj 中定義過了
+Source.obj : error LNK2005: "bool __cdecl isfull(void)" (?isfull@@YA_NXZ) 已在 a.obj 中定義過了
+Source.obj : error LNK2005: "void __cdecl pop(void)" (?pop@@YAXXZ) 已在 a.obj 中定義過了
+Source.obj : error LNK2005: "void __cdecl push(int)" (?push@@YAXH@Z) 已在 a.obj 中定義過了
+Source.obj : error LNK2005: "int top" (?top@@3HA) 已在 a.obj 中定義過了
+Source.obj : error LNK2005: "int * stack" (?stack@@3PAHA) 已在 a.obj 中定義過了
+C:\Users\Fuckyoubitch\source\repos\priority queue\Debug\priority queue.exe : fatal error LNK1169: 找到有一或多個已定義的符號
