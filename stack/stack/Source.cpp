@@ -6,16 +6,20 @@ void print();
 bool isfull();
 bool isempty();
 
+void add();
+void del();
+
+
 int top = -1;
 int stack[N];
-/*
+
 int main() {
 	push(10);
 	push(5);
 	push(6);
 	pop();
 }
-*/
+
 void push(int n) {
 	if (isfull ()!= 0 ) {
 		printf("add %d in stack\n", n);
