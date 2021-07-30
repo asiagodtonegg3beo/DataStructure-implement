@@ -9,10 +9,14 @@ public:
 	int data;
 	Node* link;
 };
+void printlist(Node* x);
 void insert(Node* x, Node* t);
 void insert(Node* x, int item);
+void Push_front(int item,Node *x);
 void del(Node* x, Node* y);
 void del(Node* x);
+void del(Node* x, int item);
+
 int main() {
 	Node *t = new Node();			//(t,5)->(tmp,8)
 	Node* tmp = new Node();
@@ -23,23 +27,28 @@ int main() {
 	t->link = tmp;
 	tmp->data = 8;
 	tmp->link = NULL;
-	insert(t, new_node);
-	del(t);
+	//Push_front(1, t);
+	insert(t, 10);
+	del(t,10);
+	//del(t);
+	printlist(t);
 }
                                        //x↓         t↓       tmp↓
 void insert(Node* x, Node* t) { //insert:(?,xlink)->(5,tlink)->(8,tmplink)
 	t->link = x->link;          //t->node會插入在x->的node
-	x->link = t;
-
+	x->link = x;
 }
 
 void insert(Node* x, int item) {       //x↓         t↓
 	Node* t = new Node();       //insert:(?,xlink)->(item,tlink)->(8,tmplink)
 	t->data = item;
+
 	t->link = x->link;
 	x->link = t;
 
+
 }
+
 
 void del(Node* x, Node* y) {   //y為x的前一node，case1:x為第一節點，y->null / case2:else
 	Node* first = new Node();
@@ -52,15 +61,31 @@ void del(Node* x, Node* y) {   //y為x的前一node，case1:x為第一節點，y->null / ca
 
 
 }
+
+
 void del(Node* headref) {
 	Node* current = headref;
 	Node* next = NULL;
 	while (current != NULL) {
 		next = current->link;
-		free(current);
+		delete current;
 		current=next;
 	}
 	headref = NULL;
+}
+
+void printlist(Node* x) {
+	Node* current = x;
+	Node* next = NULL;
+	if (current != NULL)
+		while (current != NULL) {
+			next = current->link; //next指向下一個節點
+			printf("%d ", current->data);
+			current = next;
+		}
+	else {
+		printf("This current has been delete");
+	}
 }
 /*
 new(t):
