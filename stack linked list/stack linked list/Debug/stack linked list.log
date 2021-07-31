@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\Fuckyoubitch\source\repos\stack linked list\stack linked list\Source.cpp(64,6): warning C4551: 函式呼叫遺漏引數清單
+C:\Users\Fuckyoubitch\source\repos\stack linked list\stack linked list\Source.cpp(66): warning C4715: 'peek': 不是所有控制路徑都傳回值
+  stack linked list.vcxproj -> C:\Users\Fuckyoubitch\source\repos\stack linked list\Debug\stack linked list.exe
