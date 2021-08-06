@@ -1,2 +1,4 @@
-﻿  Source.cpp
-  double linked list 雙向鏈結串列.vcxproj -> C:\Users\Fuckyoubitch\source\repos\double linked list 雙向鏈結串列\Debug\double linked list 雙向鏈結串列.exe
+﻿  circular.cpp
+Source.obj : error LNK2005: _main 已在 circular.obj 中定義過了
+Source.obj : error LNK2005: "class Node * head" (?head@@3PAVNode@@A) 已在 circular.obj 中定義過了
+C:\Users\Fuckyoubitch\source\repos\double linked list 雙向鏈結串列\Debug\double linked list 雙向鏈結串列.exe : fatal error LNK1169: 找到有一或多個已定義的符號
