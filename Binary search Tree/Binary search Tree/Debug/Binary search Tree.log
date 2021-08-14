@@ -1,5 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: 中繼目錄 (Debug\) 包含從其他專案 (Binary search Tree.vcxproj) 共用的檔案。這可能導致錯誤的清除和重建行為。
   Source.cpp
-C:\Users\Fuckyoubitch\source\repos\Binary search Tree\Binary search Tree\Source.cpp(25,20): warning C4018: '<': signed/unsigned 不相符
-C:\Users\Fuckyoubitch\source\repos\Binary search Tree\Binary search Tree\Source.cpp(76): warning C4715: 'insertnode': 不是所有控制路徑都傳回值
+C:\Users\Fuckyoubitch\source\repos\Binary search Tree\Binary search Tree\Source.cpp(26,20): warning C4018: '<': signed/unsigned 不相符
+C:\Users\Fuckyoubitch\source\repos\Binary search Tree\Binary search Tree\Source.cpp(81): warning C4715: 'insertnode': 不是所有控制路徑都傳回值
+C:\Users\Fuckyoubitch\source\repos\Binary search Tree\Binary search Tree\Source.cpp(128): warning C4715: 'search': 不是所有控制路徑都傳回值
   Binary search Tree.vcxproj -> C:\Users\Fuckyoubitch\source\repos\Binary search Tree\Debug\Binary  Tree.exe

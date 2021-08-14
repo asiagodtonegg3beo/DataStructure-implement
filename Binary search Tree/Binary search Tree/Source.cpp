@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<iostream>
 #include<queue>
+#include<deque>
 #include<stdlib.h>
 using namespace std;
 
@@ -10,26 +11,30 @@ public:
 	char data;
 	Node* rchild;
 };
-
+deque <int> traserval;
 Node* createnode(char ch);				/*建構函式*/
 Node* insertnode(Node* root, char ch); /*插入函式*/
 void inorder(Node* root);			   /*中序*/
 void preorder(Node* root);			   /*前序*/
 void postorder(Node* root);			   /*後序*/
-
-
+bool search(Node* root, char t);
+void trase();
 int main() {
 	Node* root = createnode('A');
 	cout << "存放 " << "A ";
-	char c[] = "BCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char c[] = "BCDEF";
 	for (int i = 0; i < strlen(c); i++) {
 		cout << c[i] << " ";
 		insertnode(root, c[i]);
 	}
 	cout << endl;
 	cout << "中序 "; inorder(root); cout << endl;
-	cout << "前序 "; postorder(root); cout << endl;
-	cout << "後序 "; preorder(root); cout << endl;
+	//cout << "前序 "; postorder(root); cout << endl;
+	//cout << "後序 "; preorder(root); cout << endl;
+	//(search(root, 'F')) ? printf("find") : printf("None");
+	//trase();
+
+
 }
 
 Node* createnode(char ch) {
@@ -101,5 +106,31 @@ void postorder(Node* root) {
 	cout << root->data << " ";
 }
 
+bool search(Node* root, char t) {
+
+	if (root==NULL) {
+		return false;
+	}
+	else
+		if (t == root->data) {
+			printf("find %c in root\n",root->data);
+			traserval.push_back(root->data);
+			return true;
+		}
+		else if (t < root->data) {
+			traserval.push_back(root->data);
+			search(root->lchild, t);
+		}
+		else if (t > root->data) {
+			traserval.push_back(root->data);
+			search(root->rchild, t);
+		}
+}
+
+void trase() {
+	for (auto it = traserval.begin(); it != traserval.end(); it++) {
+		printf("%c ", *it);
+	}
+}
 
 
