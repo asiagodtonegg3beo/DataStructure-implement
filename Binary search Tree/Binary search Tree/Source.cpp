@@ -64,15 +64,17 @@ Node* insertnode(Node* root, char ch)
 		Node* temp = q.front();
 		q.pop();
 
-		if (temp->lchild != NULL)
+		if (temp->lchild != NULL) {
 			q.push(temp->lchild);
+		}
 		else {
 			temp->lchild = createnode(ch);
 			return root;
 		}
 
-		if (temp->rchild != NULL)
+		if (temp->rchild != NULL) {
 			q.push(temp->rchild);
+		}
 		else {
 			temp->rchild = createnode(ch);
 			return root;
